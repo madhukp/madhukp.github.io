@@ -16,69 +16,274 @@
          color: #2c2d2d;
          margin:0;
          }
-         .intro p{
+         .intro {
          color: #2c2d2d;
+		 font-size: 20px;
          }
          /* Centered texts in each section
          * --------------------------------------- */
          .section{
          text-align:left;
          }
-		 .
+		 .section1
+		 {
+         text-align:center;
+         }
+		 
+		 .button1 {
+			background-color: #029bce; /* ededed 008CBA  017da5 017aa3*/
+			color: #ededed;
+			/*border: 2px solid #029bce;  blue   */
+			border: 0;
+			border-width: 0;
+			/* border-radius: 12px; */
+			padding: 15px 32px;
+			text-align: center;
+			font-size: 24px;
+			-webkit-transition-duration: 0.4s; /* Safari */
+			transition-duration: 0.4s;
+		}
 
+		.button1:hover {
+			background-color: #017aa3; /* blue */
+			color: white;
+			
+		}
+		
+	/*	.bodyText {
+			font-size: 16px;
+		}*/
+		.bodyText {
+		  font-size: 13.5px;
+		  font-family: 'Raleway', sans-serif;
+		/*  -webkit-margin-before: 0.2em;
+		  -webkit-margin-after: 0.2em;*/
+		  color:#404040;
+		  text-align: justify;
+		}
+		
+		/************************* overview ****************/
+		
+		form {
+		  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		  position: absolute;
+		  left: 10px;
+		  top: 10px;
+		}
+		label {
+		  display: block;
+		}
+
+		body{
+		  font-family: sans-serif;  
+		}
+
+		.checkbox {
+			margin: 50px auto;
+			position: relative;
+			display: block;
+			width: 100px;
+		}
+
+		 .yaxis line {
+		  stroke: lightgrey;
+		  stroke-opacity: 0.3;
+		  shape-rendering: crispEdges;
+		}
+
+		.axis line, .axis, .axis path {
+		   shape-rendering: crispEdges;
+		   stroke-opacity: 0.3;
+		   stroke: lightgrey;
+		   
+		 }
+		 
+		 .toolTip {
+		  position: absolute;
+		  display: none;
+		  min-width: 80px;
+		  height: auto;
+		  background: none repeat scroll 0 0 #f4f4f4;
+		  border: 2px solid darkgrey;
+		  padding: 7px;
+		  text-align: left;
+		  border-radius: 5px;
+		  font-size: 11px;
+		  pointer-events: none;
+		}
+
+		 .anno6 {
+		  min-width: 20px;
+		  max-width: 20px;
+		  text-align: right;
+		  font-size: 11px;
+		}
+
+		 .anno7 {
+		  min-width: 20px;
+		  max-width: 20px;
+		  text-align: right;
+		  font-size: 11px;
+		}
+
+		 .anno8 {
+		  min-width: 20px;
+		  max-width: 20px;
+		  text-align: right;
+		  font-size: 11px;
+		}
+
+		 .annoto5 {
+		  min-width: 20px;
+		  max-width: 20px;
+		  text-align: right;
+		  font-size: 11px;
+		}
+		 .annoto6 {
+		  min-width: 20px;
+		  max-width: 20px;
+		  text-align: right;
+		  font-size: 11px;
+		}
+
+		 .viz1title {
+		  font-size: 20px;
+		}
+
+		 .legendmale3 {
+		  font-size: 15px;
+		}
+
+		 .legendfemale3 {
+		  font-size: 15px;
+		}
+
+		 .legendstk3 {
+		  font-size: 15px;
+		}
+
+		 .legendgrp3 {
+		  font-size: 15px;
+		}
+		
+		.noselectzzzzzz {
+		  -webkit-touch-callout: none; /* iOS Safari */
+			-webkit-user-select: none; /* Safari */
+			 -khtml-user-select: none; /* Konqueror HTML */
+			   -moz-user-select: none; /* Firefox */
+				-ms-user-select: none; /* Internet Explorer/Edge */
+					user-select: none; /* Non-prefixed version, currently
+										  supported by Chrome and Opera */
+		}
+
+		/************************* overview ****************/
+		
+		
+		
       </style>
       <script type="text/javascript" charset="utf-8" async="" src="./CS498-Project_files/button.bf357a6ba1a5f1fa0ddb61377ae3add5.js.download"></script>
    </head>
    <body class="fp-viewing-firstPage" style="overflow: hidden; height: 100%;">
       <div id="fullpage" class="fullpage-wrapper" style="height: 100%; position: relative; touch-action: none; transform: translate3d(0px, 0px, 0px); transition: all 700ms ease;">
-         <div class="section active fp-section fp-table fp-completely" id="section1" data-fp-styles="null" data-anchor="firstPage" style="height: 662px; background-color: rgb(198, 61, 15);">
-            <div class="fp-tableCell" style="height: 662px;">
-               <div class="intro">
-                  <h1>Navigation dots</h1>
-                  <p>An easy and beautiful way to navigate throw the sections</p>
+         <div class="section active fp-section" id="section1" data-fp-styles="null" data-anchor="firstPage" style="height: 662px; background-color: rgb(198, 61, 15);background:url('bckImage1.png');background-repeat: no-repeat;background-position: center center;background-attachment: fixed; ">
+               <div class="intro" align="center"style="height: 40%;" onclick="window.location='./CS498-Project.html#secondPage'">
+                  <h1>Welcome</h1>
+				  <br>
+                  <button class="button1" type="button">About this Visualization</button>
                </div>
-            </div>
          </div>
-         <div class="section fp-section" id="section2" data-fp-styles="null" data-anchor="secondPage" style="height: 662px; background-color: rgb(27, 188, 155);">
-            <div class="fp-tableCell" style="height: 662px;">
-               <div class="intro">
-                  <h1>Navigation dots</h1>
-                  <p>An easy and beautiful way to navigate throw the sections</p>
-               </div>
-            </div>
+         <div class="section fp-section fp-table" id="section2" data-fp-styles="null" data-anchor="secondPage" style="width: 100%; height: 662px; background-color: rgb(27, 188, 155); padding-left: 3%; padding-right: 7%">
+			<div class="fp-tableCell"  style="height:662px;">
+							<div style="float: right; width: 50%;">
+								<div style="padding-left:10%;">
+									<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">Parameters</p>
+									<br>
+									<p class="bodyText">There are several useful parameters included all over the project. There is an intuitive and dynamic side bar which allows the user to navigate to any slide. If the user hovers over the circles a text will be displayed with the name of the scene. A thick circle is used to represent the current state/slide of the narrative visualization. On the animated slide, there is a button and a slider which control a set of parameters, such as the graph the user is seeing and the year in the title.</p>
+									<br>
+									<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">Triggers</p>
+									<p class="bodyText">All the graphs have legends that are triggers as well. When the user clicks on the text or the colored box a section of the graph will be filtered. The parameter that is triggered is the one that controls what to show or not to show in the graph. Same thing happens with the brushing functionality that triggers a change in the scale parameter. On the animated slide, any change on the slider bar or the play button causes a change in the year parameter.</p>
+									<p style="font-size: 16px; font-weight: bold; color:#00aaff;">Cool things to notice</p>
+									<p class="bodyText">- The grid lines are automatically scale when using the brushing functionality.<br>- All the tooltips are automatically scale to fit the text.<br>- The legend's filters are gray-out when not shown in the graph.<br>- The play button has a nice push animation.<br>- Most of the graphs have a context graph so the user doesn't get lost when exploring.</p>
+									<p style="font-size: 16px; font-weight: bold; color:red;">Warning</p>
+									<p class="bodyText">This project is meant to be visualized on Chrome (recommended), Firefox, or Safari. It needs a screen with a resolution of at least 1255 X 584 pixels, if it is smaller than that then the user can see colliding objects.</p>
+								</div>
+							</div>
+							<div style="float: left; width: 50%;">
+								<p style="font-size: 40px; font-weight: bold; color:#1a1a1a;">About this visualization<br></p>
+								<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">Narrative visualization method</p>
+								<p class="bodyText">This project was created based on the hybrid interactive slideshow ordering technique. Guidance is provided on each slide, but the users are free to drill down and list some details or&nbsp;investigate some tangent that they might be interested on or they can choose just to continue.</p>
+								<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">Scenes</p>
+								<p class="bodyText">This project was created as slides thanks to the awesome FullPage.js library in order to keep coherence and make it user-friendly. Each scene is a single chart with a specific goal related to the same subject and in a specific order to best convey the message. A double column layout is used in all the slides alternating the position of the text, this guarantees visual consistency. The same font is used throughout the project as well.</p>
+								<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">Annotations</p>
+								<p class="bodyText">The first scene is used as an introductory slide to explain the “what” and “why” of the project. After that, each slide has two annotations, one that suggests a train of thinking that is used to draw a conclusion at the end (that governments must take seriously fertility rate and that religion is a possible cause of high fertility rate in some countries) and another one that is used to explain the users how to play with the data. There is also a title on each graph (the one that is animated changes automatically year by year), their legends, and their axis labels. All the annotations are cleared on each slide and are independent from each other. All of them use the same font for visual consistency. Each graph has tooltips when hovering over the data points.</p>
+							</div>			
+						</div>
          </div>
-         <div class="section fp-section fp-table" id="section3" data-fp-styles="null" data-anchor="thirdPage" style="height: 662px; background-color: rgb(126, 143, 124);">
+         <div class="section fp-section fp-table" style="width: 100%; height: 662px; padding-left: 3%; padding-right: 7%; background-color: rgb(242, 242, 242);"  data-anchor="thirdPage"><div class="fp-tableCell" style="height:662px;">
+				<div style="float: right; width: 60%;">
+					<div style="padding-left:6%;">
+						<svg class="viz1" id = "viz1" width="700" height="520"></svg>
+				</div>
+				</div>
+				<div style="float: left; width: 40%;">
+					<p style="font-size: 40px; font-weight: bold; color:#1a1a1a;">Overview</p><br>
+					<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">TBD TBD TBD</p>
+					<p class="bodyText">TBD tbd tbd tbd TBDTBD tbd tbd tbd TBDTBD tbd tbd tbd TBD.</p><br>
+					<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">TBD TBD TBD</p>
+					<p class="bodyText">TBD tbd tbd tbd TBDTBD tbd tbd tbd TBDTBD tbd tbd tbd TBD.</p><br>
+				</div>			
+			</div>
+         </div>
+		 
+         <div class="section fp-section" id="section4" data-fp-styles="null" data-anchor="fourthPage" style="height: 662px; background-color: rgb(126, 143, 124);">
             <div class="fp-tableCell" style="height: 662px;">
                <div class="intro">
                   <h1>Enjoy it</h1>
                </div>
             </div>
          </div>
+
+         <div class="section fp-section" id="section5" data-fp-styles="null" data-anchor="fifthPage" style="height: 662px; background-color: rgb(126, 143, 124);">
+            <div class="fp-tableCell" style="height: 662px;">
+               <div class="intro">
+                  <h1>Enjoy it</h1>
+               </div>
+            </div>
+         </div>
+
+         <div class="section fp-section" id="section6" data-fp-styles="null" data-anchor="sixthPage" style="height: 662px; background-color: rgb(126, 143, 124);">
+            <div class="fp-tableCell" style="height: 662px;">
+               <div class="intro">
+                  <h1>Enjoy it</h1>
+               </div>
+            </div>
+         </div>
+
+         <div class="section fp-section" id="section7" data-fp-styles="null" data-anchor="seventhPage" style="height: 662px; background-color: rgb(126, 143, 124);">
+            <div class="fp-tableCell" style="height: 662px;">
+               <div class="intro">
+                  <h1>Enjoy it</h1>
+               </div>
+            </div>
+         </div>
+
+		 
       </div>
       <script type="text/javascript" src="./CS498-Project_files/fullpage.js.download"></script>
       <script type="text/javascript" src="./CS498-Project_files/examples.js.download"></script>
       <script type="text/javascript">
          var myFullpage = new fullpage('#fullpage', {
-         	anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage'], //
-         	sectionsColor: ['#fdefe7', '#fefaf8', '#fdefe7', '#fefaf8', '#fdefe7'],
+         	anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage', 'seventhPage'], //
+         	sectionsColor: ['#e8f7ff', '#f3fcff', '#f9fbfc', '#f3fcff', '#e8f7ff', '#f3fcff', '#e8f7ff'],
          	navigation: true,
          	navigationPosition: 'right',
-         	navigationTooltips: ['Welcome', 'About this visualization', 'Overview']
+         	navigationTooltips: ['Welcome', 'About this Visualization', 'Overview', 'States Comparison', 'Age Group', 'Mode of Transportation', 'Resource']
+			//'Welcome', 'About this visualization', 'Overview'  # c1efff - dark blue   # e1f7ff - light blue 
+			//  '#fdefe7', '#fefaf8'  f9fbfc
          });
       </script>
-      <div id="fp-nav" class="fp-right" style="margin-top: -33.5px;">
-         <ul>
-            <li>
-               <a href="./CS498-Project.html#firstPage" class="active"><span></span></a>
-               <div class="fp-tooltip fp-right">Welcome</div>
-            </li>
-            <li>
-               <a href="./CS498-Project.html#secondPage" class=""><span></span></a>
-               <div class="fp-tooltip fp-right">About this visualization</div>
-            </li>
-            <li>
-               <a href="./CS498-Project.html#thirdPage" class=""><span></span></a>
-               <div class="fp-tooltip fp-right">Overview</div>
-            </li>
-         </ul>
-      </div>
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="./firstChart.js"></script>
+
+</body>
