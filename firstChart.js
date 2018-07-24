@@ -71,6 +71,7 @@ var series = g.selectAll(".series")
   .enter().append("g")
     .attr("fill", function(d, i) { return color[i]; });
 var rect = series.selectAll("rect")
+  .attr("class","viz1rect")
   .data(function(d) { return d; })
   .enter().append("rect")
     .attr("x", function(d, i) { return x(i); })
@@ -86,8 +87,8 @@ var rect = series.selectAll("rect")
 			tooltip  
 			  .html(tooltiptext(d[1]-d[0], i))
 			  //.style("opacity", .9)
-			  .style("left", (d3.event.pageX + 0) + "px")
-              .style("top", (d3.event.pageY -28 ) + "px")
+			  .style("left", (d3.event.pageX + 3) + "px")
+              .style("top", (d3.event.pageY - 38) + "px")
               .style("display", "inline-block")
               ;  // 
         })
@@ -102,7 +103,7 @@ var rect = series.selectAll("rect")
 			
 function tooltiptext(d,i) {
  var text;
- 
+
  if (d > 60000 ) {  //// gray color - 4c4a4a
 	text = "<strong><span style='color:#4c4a4a'>Year:</span></strong> <span style='color:#7a3402'>" + (i+2001) + "</span><br>" +
 	"<strong><span style='color:#4c4a4a'>Male Death Count: </span></strong> <span style='color:#7a3402'>" + d3.format(",")(d) + "</span><br>" ;
@@ -113,9 +114,12 @@ function tooltiptext(d,i) {
 	return text;
  }	
   
+ /*
  var text = "<strong>Country:</strong> <span style='color:red'>" + "datahere" + "</span><br>" + "<strong>Country:</strong> <span style='color:red'>" + "datahere" + "</span><br>"+ "<strong>Country:</strong> <span style='color:red'>" + "datahere" + "</span><br>";
- return text;
-}		
+ return text;*/
+}	
+
+	
 			/*
 rect.transition()
     .delay(function(d, i) { return i * 10; })
@@ -196,19 +200,6 @@ svg.append("circle")
       //.style("fill","#33302d")
       .text("Year");
   
-/*
-d3.selectAll("input")
-    .on("change", changed);
-*/ 
-changed();	   
-	  
-/*
-var timeout = d3.timeout(function() {
-  d3.select("input[value=\"stacked\"]")
-      .property("checked", true)
-      .dispatch("change");
-}, 5);
-*/
 
 //transitionStacked();
 /////////////////////////// ANNOTATIONS 
@@ -545,6 +536,31 @@ svg.append("text")
 ////////////// Legends \\\\\\\\\\\\\\
 
 
+d3.selectAll(".section3")
+    .on("active", changed());
+
+/*
+
+d3.selectAll(".section3")
+    .on("nonactive", eraseviz1());
+	
+function eraseviz1(){
+	d3.selectAll(".viz1rect")
+		.attr("height",0);
+}
+*/
+
+//changed();	   
+
+/*
+var timeout = d3.timeout(function() {
+  d3.select("input[value=\"stacked\"]")
+      .property("checked", true)
+      .dispatch("change");
+}, 5);
+*/
+
+
 function changed() {
   //timeout.stop();
   /*
@@ -554,7 +570,6 @@ function changed() {
   else */
   transitionStacked();
 }
-
 
 function transitionGrouped() {
 
@@ -927,7 +942,7 @@ function transitionStacked() {
 	  //.style("fill", "black")
       //.attr("dy", "1em")
       .style("text-anchor", "end")
-      .text("MALE death count from road");	
+      .text("TOTAL death count from road");	
 
   d3.selectAll(".anno8")
   .transition()
@@ -1047,8 +1062,9 @@ function transitionStacked() {
 
   rect.transition()
       .duration(500)
-      .delay(function(d, i) { return i * 10; })
-      .attr("y", function(d) { return y(d[1]); })
+      //.delay(function(d, i) { return i * 10; })
+      .delay(300)
+	  .attr("y", function(d) { return y(d[1]); })
       .attr("height", function(d) { return y(d[0]) - y(d[1]); })
     .transition()
       .attr("x", function(d, i) { return x(i); })
