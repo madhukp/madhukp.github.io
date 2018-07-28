@@ -94,6 +94,7 @@ viz6annot_y2 = 180;
       .style("text-anchor", "end")
       .text("with MOTOR CYCLES");	
 
+
 /* 
 HIGHEST road accident 
 deaths were recoded 
@@ -229,6 +230,7 @@ yt2 = [ 27701, 8356, 8461, 7894, 8322, 20565, 9492, 40187, 2587, 12385],
 mdFlg = [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
 yrFlg = [0,0,1],
 xCenter = [200, 200, 200],
+glblRunIt = 1,
 ctFlg = "Grouped";
 
 var vizBdata = [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
@@ -283,6 +285,44 @@ function drawBubbles(){
 	console.log(nodes);
 	
 	function ticked() {
+		
+
+		  /* *************************** 
+
+	
+		var nodeB = d3.select('.viz6').selectAll("circle")
+    .data(nodes)
+    .enter().append("g")//.call(simulation.drag)
+	;
+		
+		nodeB.append("circle")
+		.attr('class','bubblesViz6')
+			.attr("r", function(d){return d.radius})
+			.style('fill', function(d) { return	colorsviz3[d.index];})
+			.attr('cx', function(d) { return d.x; })
+		.attr('cy', function(d) { return d.y; })
+			
+			
+			;
+		
+		//add text to the group    
+		nodeB.append("text")
+			.text(function (d) {
+			return d.name;
+		})
+		.attr("dx", function(d) { return d.x; })
+			.attr("dy", function(d) { return d.y; })
+			.text(function (d) {
+			return "hello";
+		})
+			.style("stroke", "gray")
+			.style("text-anchor", "middle");		
+		
+
+				*************************** */
+
+	
+		
 	  var u = d3.select('.viz6').selectAll('circle').data(nodes);
 
 	  u.enter()
@@ -293,7 +333,7 @@ function drawBubbles(){
 		.merge(u)
 		.attr('cx', function(d) { return d.x; })
 		.attr('cy', function(d) { return d.y; })
-		.attr("stroke","#bababa").attr("stroke-width",3) // #cecece
+		.attr("stroke","#cecece").attr("stroke-width",3) // #cecece
 		.on("mouseover", function(d,i){
 				//console.log(d);
 				tooltip.transition().duration(200).style("opacity", .9);
@@ -306,17 +346,17 @@ function drawBubbles(){
 				  ;  
 				d3.select(this).transition().duration(200)
 				.attr("r",function(d){return d.radius+10;})
-				.attr("stroke","white").attr("stroke-width",3)
+				//.attr("stroke","grey").attr("stroke-width",3)
 			})
 			.on("mouseout", function(d){
 				tooltip.transition().duration(1).style("opacity", 0);
 				d3.select(this).transition().duration(200)
 				.attr("r",function(d){return d.radius;})
-				.attr("stroke","#bababa").attr("stroke-width",3) // #cecece
+				.attr("stroke","#cecece").attr("stroke-width",3) // #cecece
+		})
 				
 				
-				//d3.select(this).transition().duration(200).attr("r",cirGlbRi);
-				})
+				
 		/*	.append("text")
 			.attr("dy", ".3em")
 			.text("hello")
@@ -327,6 +367,23 @@ function drawBubbles(){
 			;
 		
 		//u.exit().remove();
+	/*	u.append("text")
+	.attr('dx', 10)
+	.attr('dy', ".35em")  
+	.attr('font-size',20).style("text-anchor", "middle")
+	.style("fill", "black").style("stroke-width", "100px")
+	.text("hello");	
+
+
+		
+		{radius: 100, category: 2, index: 7, x: 319.6402887714007, y: 224.50934287893273, …}
+{radius: 68.93025107621867, category: 0, index: 0, x: 388.8407772791446, y: 378.62615342226877, …}
+{radius: 51.17326498618956, category: 1, index: 5, x: 469.11938629681663, y: 247.077108732225, …}
+
+{radius: 100, category: 2, index: 7, x: 616.8792612737659, y: 284.2508035782597, …}
+{radius: 51.17326498618956, category: 1, index: 5, x: 379.69366963464256, y: 298.9112832682662, …}
+{radius: 68.93025107621867, category: 0, index: 0, x: 98.53084309055534, y: 297.0936709310974, …}
+*/
 		
 	 /*
 	u.append("text")
@@ -355,27 +412,151 @@ function drawBubbles(){
 		
 		*/
 		
-		
+		if(glblRunIt == 1) {
+//console.log("am here");
+svg6.selectAll('.cirLabels').remove();
+	svg6.append("text")
+	  .attr("class", "cirLabels")
+      .attr("dx", 319).attr("dy", 224+5)
+	  .style("stroke-width",8).style("fill", "white")
+      .style("text-anchor", "middle")
+      .text("Motor Cycles");	
+	  
+	svg6.append("text")
+	  .attr("class", "cirLabels")
+      .attr("dx", 388).attr("dy", 378+5)
+	  .style("stroke-width",8).style("fill", "white")
+      .style("text-anchor", "middle")
+      .text("Trucks");
+
+	svg6.append("text")
+	  .attr("class", "cirLabels")
+      .attr("dx", 469).attr("dy", 247+5)
+	  .style("stroke-width",8).style("fill", "white")
+      .style("text-anchor", "middle")
+      .text("Cars");
+
+
+
+		}
+
+
 	}
+
+
+
 
 }
 
 drawBubbles();
+//glblRunIt = 0;
+/*
+svg6.selectAll('.cirLabels').remove();
+	svg6.append("text")
+	  .transition()
+      .duration(500)
+	  .delay(600)	
+	  .attr("class", "cirLabels")
+      .attr("dx", 319).attr("dy", 224+5)
+	  .style("stroke-width",8).style("fill", "white")
+      .style("text-anchor", "middle")
+      .text("Motor Cycles");	
+	  
+	svg6.append("text")
+	  .transition()
+      .duration(500)
+	  .delay(600)	
+	  .attr("class", "cirLabels")
+      .attr("dx", 388).attr("dy", 378+5)
+	  .style("stroke-width",8).style("fill", "white")
+      .style("text-anchor", "middle")
+      .text("Trucks");
 
+	svg6.append("text")
+	  .transition()
+      .duration(500)
+	  .delay(600)	
+	  .attr("class", "cirLabels")
+      .attr("dx", 469).attr("dy", 247+5)
+	  .style("stroke-width",8).style("fill", "white")
+      .style("text-anchor", "middle")
+      .text("Cars");
+	*/
 
+			
+/*
+{radius: 100, category: 2, index: 7, x: 319.6402887714007, y: 224.50934287893273, …}
+{radius: 68.93025107621867, category: 0, index: 0, x: 388.8407772791446, y: 378.62615342226877, …}
+{radius: 51.17326498618956, category: 1, index: 5, x: 469.11938629681663, y: 247.077108732225, …}
+
+{radius: 100, category: 2, index: 7, x: 616.8792612737659, y: 284.2508035782597, …}
+{radius: 51.17326498618956, category: 1, index: 5, x: 379.69366963464256, y: 298.9112832682662, …}
+{radius: 68.93025107621867, category: 0, index: 0, x: 98.53084309055534, y: 297.0936709310974, …}
+*/
+
+			
 // buttons START
 tmpOffset6W = 160;
 tmpOffset6H = 65;
 
 btnAllMode = svg6.append("rect").attr("class","yearButtonviz6").attr("height",30).attr("width",200).attr("fill","#029bce")
 	.attr("x",tmpOffset6W).attr("y",tmpOffset6H).attr("rx",6).attr('stroke', '#029bce').attr('stroke-width', 2)
+	.on("mouseover",function(){
+		d3.select(this).style("cursor","pointer");
+	})
 	.on("click",function(){
 		d3.select(this).transition().duration(100).attr("fill","#029bce");  //017aa3
 		lblAllMode.transition().duration(100).delay(100).style("fill", "white");
 		btnBySize.transition().duration(100).delay(100).attr("fill","white");
 		lblBySize.transition().duration(100).delay(100).style("fill", "#029bce");
 		xCenter = [200, 200, 200]; 
-			drawBubbles();
+			
+	glblRunIt = 0;
+	drawBubbles();
+	
+	svg6.selectAll('.cirLabels').remove();
+	svg6.append("text")
+	  .transition()
+      .duration(500)
+	  .delay(600)	
+	  .attr("class", "cirLabels")
+      .attr("dx", 319).attr("dy", 224+5)
+	  .style("stroke-width",8).style("fill", "white")
+      .style("text-anchor", "middle")
+      .text("Motor Cycles");	
+	  
+	svg6.append("text")
+	  .transition()
+      .duration(500)
+	  .delay(600)	
+	  .attr("class", "cirLabels")
+      .attr("dx", 388).attr("dy", 378+5)
+	  .style("stroke-width",8).style("fill", "white")
+      .style("text-anchor", "middle")
+      .text("Trucks");
+
+	svg6.append("text")
+	  .transition()
+      .duration(500)
+	  .delay(600)	
+	  .attr("class", "cirLabels")
+      .attr("dx", 469).attr("dy", 247+5)
+	  .style("stroke-width",8).style("fill", "white")
+      .style("text-anchor", "middle")
+      .text("Cars");
+
+
+ 			
+/*
+{radius: 100, category: 2, index: 7, x: 319.6402887714007, y: 224.50934287893273, …}
+{radius: 68.93025107621867, category: 0, index: 0, x: 388.8407772791446, y: 378.62615342226877, …}
+{radius: 51.17326498618956, category: 1, index: 5, x: 469.11938629681663, y: 247.077108732225, …}
+
+{radius: 100, category: 2, index: 7, x: 616.8792612737659, y: 284.2508035782597, …}
+{radius: 51.17326498618956, category: 1, index: 5, x: 379.69366963464256, y: 298.9112832682662, …}
+{radius: 68.93025107621867, category: 0, index: 0, x: 98.53084309055534, y: 297.0936709310974, …}
+*/
+
 		subLbl1.text("")	;
 		subLbl11.text("")	;
 		subLbl2.text("")	;
@@ -422,6 +603,18 @@ tmpOffset6H = tmpOffset6H;
 
 btnBySize = svg6.append("rect").attr("class","yearButtonviz6").attr("height",30).attr("width",200).attr("fill","white")
 	.attr("x",tmpOffset6W).attr("y",tmpOffset6H).attr("rx",6).attr('stroke', '#029bce').attr('stroke-width', 2)
+	.on("mouseover",function(){  ///  007aa3
+		d3.select(this).style("cursor","pointer");
+		//d3.select(this).attr("x",function(d){console.log(d);});
+
+		//d3.select(this).transition().duration(100).attr("fill","#efefef");  //017aa3
+		//lblBySize.transition().duration(100).delay(100).style("fill", "white");
+	})
+	.on("mouseout",function(){
+		//d3.select(this).style("cursor","pointer");
+		//d3.select(this).transition().duration(100).attr("fill","white");  //017aa3
+		//lblBySize.transition().duration(100).delay(100).style("fill", "#029bce");
+	})
 	.on("click",function(){
 		d3.select(this).transition().duration(100).attr("fill","#029bce");  //017aa3
 		lblBySize.transition().duration(100).delay(100).style("fill", "white");
@@ -429,6 +622,53 @@ btnBySize = svg6.append("rect").attr("class","yearButtonviz6").attr("height",30)
 		lblAllMode.transition().duration(100).delay(100).style("fill", "#029bce");
 		xCenter = [300, 550, 800]; 
 			drawBubbles();
+		glblRunIt = 0;
+
+svg6.selectAll('.cirLabels').remove();
+	svg6.append("text")
+	  .transition()
+      .duration(500)
+	  .delay(600)	
+	  .attr("class", "cirLabels")
+      .attr("dx", 616).attr("dy", 284+5)
+	  .style("stroke-width",8).style("fill", "white")
+      .style("text-anchor", "middle")
+      .text("Motor Cycles");	
+	  
+	svg6.append("text")
+	  .transition()
+      .duration(500)
+	  .delay(600)	
+	  .attr("class", "cirLabels")
+      .attr("dx", 379).attr("dy", 298+5)
+	  .style("stroke-width",8).style("fill", "white")
+      .style("text-anchor", "middle")
+      .text("Trucks");
+
+	svg6.append("text")
+	  .transition()
+      .duration(500)
+	  .delay(600)	
+	  .attr("class", "cirLabels")
+      .attr("dx", 98).attr("dy", 297+5)
+	  .style("stroke-width",8).style("fill", "white")
+      .style("text-anchor", "middle")
+      .text("Cars");
+
+ 			
+/*
+{radius: 100, category: 2, index: 7, x: 319.6402887714007, y: 224.50934287893273, …}
+{radius: 68.93025107621867, category: 0, index: 0, x: 388.8407772791446, y: 378.62615342226877, …}
+{radius: 51.17326498618956, category: 1, index: 5, x: 469.11938629681663, y: 247.077108732225, …}
+
+{radius: 100, category: 2, index: 7, x: 616.8792612737659, y: 284.2508035782597, …}
+{radius: 51.17326498618956, category: 1, index: 5, x: 379.69366963464256, y: 298.9112832682662, …}
+{radius: 68.93025107621867, category: 0, index: 0, x: 98.53084309055534, y: 297.0936709310974, …}
+*/
+
+
+
+
 		subLbl1.text("Large Sized Vehicles")	;
 		subLbl11.text("(4+ wheeler)")	;
 		subLbl2.text("Medium Sized Vehicles")	;

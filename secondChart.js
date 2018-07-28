@@ -208,6 +208,7 @@ tmpOffsetH = 70;
 
 btn2014 = svg.append("rect").attr("class","yearButtonviz2").attr("height",30).attr("width",70).attr("fill","white")
 	.attr("x",tmpOffsetW).attr("y",tmpOffsetH).attr("rx",6).attr('stroke', '#029bce').attr('stroke-width', 2)
+	.on("mouseover", function(){d3.select(this).style("cursor","pointer");})
 	.on("click",function(){
 		d3.select(this).transition().duration(300).attr("fill","#029bce");  //017aa3
 		lbl2014.transition().duration(100).delay(100).style("fill", "white");
@@ -230,6 +231,7 @@ tmpOffsetH = tmpOffsetH;
 
 btn2015 = svg.append("rect").attr("class","yearButtonviz2").attr("height",30).attr("width",70).attr("fill","white")
 	.attr("x",tmpOffsetW).attr("y",tmpOffsetH).attr("rx",6).attr('stroke', '#029bce').attr('stroke-width', 2)
+	.on("mouseover", function(){d3.select(this).style("cursor","pointer");})
 	.on("click",function(){
 		d3.select(this).transition().duration(300).attr("fill","#029bce");  //017aa3
 		lbl2015.transition().duration(100).delay(100).style("fill", "white");
@@ -253,6 +255,7 @@ tmpOffsetH = tmpOffsetH;
 
 btn2016 = svg.append("rect").attr("class","yearButtonviz2").attr("height",30).attr("width",70).attr("fill","white")
 	.attr("x",tmpOffsetW).attr("y",tmpOffsetH).attr("rx",6).attr('stroke', '#029bce').attr('stroke-width', 2)
+	.on("mouseover", function(){d3.select(this).style("cursor","pointer");})
 	.on("click",function(){
 		d3.select(this).transition().duration(300).attr("fill","#029bce");  //017aa3
 		lbl2016.transition().duration(100).delay(100).style("fill", "white");
@@ -490,91 +493,105 @@ lbl2016.style("fill", "white");
 
 
 //////////////////// legend clicks START 
-vizlegendca0.on("click",function(){
+vizlegendca0.on("mouseover", function(){d3.select(this).style("cursor","pointer");})
+	.on("click",function(){
 							if (databool[0] == 1) { databool[0] = 0;
 								vizlegendcb0.attr("fill", "white");}
 							else { databool[0] = 1;
 								vizlegendcb0.attr("fill", v2color[0]); }
 							changeChart(); });
-vizlegendcb0.on("click",function(){
+vizlegendcb0.on("mouseover", function(){d3.select(this).style("cursor","pointer");})
+	.on("click",function(){
 							if (databool[0] == 1) { databool[0] = 0;
 								d3.select(this).attr("fill", "white");}
 							else { databool[0] = 1;
 								d3.select(this).attr("fill", v2color[0]); }
 							changeChart(); });
 
-vizlegendca1.on("click",function(){
+vizlegendca1.on("mouseover", function(){d3.select(this).style("cursor","pointer");})
+	.on("click",function(){
 							if (databool[1] == 1) { databool[1] = 0;
 								vizlegendcb1.attr("fill", "white");}
 							else { databool[1] = 1;
 								vizlegendcb1.attr("fill", v2color[1]); }
 							changeChart(); });
-vizlegendcb1.on("click",function(){
+vizlegendcb1.on("mouseover", function(){d3.select(this).style("cursor","pointer");})
+	.on("click",function(){
 							if (databool[1] == 1) { databool[1] = 0;
 								d3.select(this).attr("fill", "white");}
 							else { databool[1] = 1;
 								d3.select(this).attr("fill", v2color[1]); }
 							changeChart(); });		
 
-vizlegendca2.on("click",function(){
+vizlegendca2.on("mouseover", function(){d3.select(this).style("cursor","pointer");})
+	.on("click",function(){
 							if (databool[2] == 1) { databool[2] = 0;
 								vizlegendcb2.attr("fill", "white");}
 							else { databool[2] = 1;
 								vizlegendcb2.attr("fill", v2color[2]); }
 							changeChart(); });
-vizlegendcb2.on("click",function(){
+vizlegendcb2.on("mouseover", function(){d3.select(this).style("cursor","pointer");})
+	.on("click",function(){
 							if (databool[2] == 1) { databool[2] = 0;
 								d3.select(this).attr("fill", "white");}
 							else { databool[2] = 1;
 								d3.select(this).attr("fill", v2color[2]); }
 							changeChart(); });	
 
-vizlegendca3.on("click",function(){
+vizlegendca3.on("mouseover", function(){d3.select(this).style("cursor","pointer");})
+	.on("click",function(){
 							if (databool[3] == 1) { databool[3] = 0;
 								vizlegendcb3.attr("fill", "white");}
 							else { databool[3] = 1;
 								vizlegendcb3.attr("fill", v2color[3]); }
 							changeChart(); });
-vizlegendcb3.on("click",function(){
+vizlegendcb3.on("mouseover", function(){d3.select(this).style("cursor","pointer");})
+	.on("click",function(){
 							if (databool[3] == 1) { databool[3] = 0;
 								d3.select(this).attr("fill", "white");}
 							else { databool[3] = 1;
 								d3.select(this).attr("fill", v2color[3]); }
 							changeChart(); });	
 
-vizlegendca4.on("click",function(){
+vizlegendca4.on("mouseover", function(){d3.select(this).style("cursor","pointer");})
+	.on("click",function(){
 							if (databool[4] == 1) { databool[4] = 0;
 								vizlegendcb4.attr("fill", "white");}
 							else { databool[4] = 1;
 								vizlegendcb4.attr("fill", v2color[4]); }
 							changeChart(); });
-vizlegendcb4.on("click",function(){
+vizlegendcb4.on("mouseover", function(){d3.select(this).style("cursor","pointer");})
+	.on("click",function(){
 							if (databool[4] == 1) { databool[4] = 0;
 								d3.select(this).attr("fill", "white");}
 							else { databool[4] = 1;
 								d3.select(this).attr("fill", v2color[4]); }
 							changeChart(); });
 
-vizlegendca5.on("click",function(){
+vizlegendca5.on("mouseover", function(){d3.select(this).style("cursor","pointer");})
+	.on("click",function(){
 							if (databool[5] == 1) { databool[5] = 0;
 								vizlegendcb5.attr("fill", "white");}
 							else { databool[5] = 1;
 								vizlegendcb5.attr("fill", v2color[5]); }
 							changeChart(); });
-vizlegendcb5.on("click",function(){
+vizlegendcb5.on("mouseover", function(){d3.select(this).style("cursor","pointer");})
+	.on("click",function(){
 							if (databool[5] == 1) { databool[5] = 0;
 								d3.select(this).attr("fill", "white");}
 							else { databool[5] = 1;
 								d3.select(this).attr("fill", v2color[5]); }
 							changeChart(); });
 
-vizlegendca6.on("click",function(){
+vizlegendca6.on("mouseover", function(){d3.select(this).style("cursor","pointer");})
+	.on("click",function(){
 							if (databool[6] == 1) { databool[6] = 0;
 								vizlegendcb6.attr("fill", "white");}
 							else { databool[6] = 1;
 								vizlegendcb6.attr("fill", v2color[6]); }
 							changeChart(); });
-vizlegendcb6.on("click",function(){
+vizlegendcb6.on("mouseover", function(){d3.select(this).style("cursor","pointer");})
+	.on("click",function(){
 							if (databool[6] == 1) { databool[6] = 0;
 								d3.select(this).attr("fill", "white");}
 							else { databool[6] = 1;

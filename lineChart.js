@@ -733,28 +733,32 @@ year 2016
 hideUnhide(5);
 
 
-viz4legendca0.on("click",function(){
+viz4legendca0.on("mouseover", function(){d3.select(this).style("cursor","pointer");})
+	.on("click",function(){
 							if (regDataBool[0] == 1) { regDataBool[0] = 0;
 								viz4legendcb0.attr("fill", "white");}
 							else { regDataBool[0] = 1;
 								viz4legendcb0.attr("fill", regionColors[0]); }
 							hideUnhide(0);
 							});
-viz4legendcb0.on("click",function(){
+viz4legendcb0.on("mouseover", function(){d3.select(this).style("cursor","pointer");})
+	.on("click",function(){
 							if (regDataBool[0] == 1) { regDataBool[0] = 0;
 								d3.select(this).attr("fill", "white");}
 							else { regDataBool[0] = 1;
 								d3.select(this).attr("fill", regionColors[0]); }
 							hideUnhide(0);
 							});
-viz4legendca1.on("click",function(){
+viz4legendca1.on("mouseover", function(){d3.select(this).style("cursor","pointer");})
+	.on("click",function(){
 							if (regDataBool[1] == 1) { regDataBool[1] = 0;
 								viz4legendcb1.attr("fill", "white");}
 							else { regDataBool[1] = 1;
 								viz4legendcb1.attr("fill", regionColors[1]); }
 							hideUnhide(1);
 							});
-viz4legendcb1.on("click",function(){
+viz4legendcb1.on("mouseover", function(){d3.select(this).style("cursor","pointer");})
+	.on("click",function(){
 							if (regDataBool[1] == 1) { regDataBool[1] = 0;
 								d3.select(this).attr("fill", "white");}
 							else { regDataBool[1] = 1;
@@ -762,14 +766,16 @@ viz4legendcb1.on("click",function(){
 							hideUnhide(1);
 							});		
 
-viz4legendca2.on("click",function(){
+viz4legendca2.on("mouseover", function(){d3.select(this).style("cursor","pointer");})
+	.on("click",function(){
 							if (regDataBool[2] == 1) { regDataBool[2] = 0;
 								viz4legendcb2.attr("fill", "white");}
 							else { regDataBool[2] = 1;
 								viz4legendcb2.attr("fill", regionColors[2]); }
 							hideUnhide(2); 
 							});
-viz4legendcb2.on("click",function(){
+viz4legendcb2.on("mouseover", function(){d3.select(this).style("cursor","pointer");})
+	.on("click",function(){
 							if (regDataBool[2] == 1) { regDataBool[2] = 0;
 								d3.select(this).attr("fill", "white");}
 							else { regDataBool[2] = 1;
@@ -777,14 +783,16 @@ viz4legendcb2.on("click",function(){
 							hideUnhide(2);
 							});	
 
-viz4legendca3.on("click",function(){
+viz4legendca3.on("mouseover", function(){d3.select(this).style("cursor","pointer");})
+	.on("click",function(){
 							if (regDataBool[3] == 1) { regDataBool[3] = 0;
 								viz4legendcb3.attr("fill", "white");}
 							else { regDataBool[3] = 1;
 								viz4legendcb3.attr("fill", regionColors[3]); }
 							hideUnhide(3);
 							 });
-viz4legendcb3.on("click",function(){
+viz4legendcb3.on("mouseover", function(){d3.select(this).style("cursor","pointer");})
+	.on("click",function(){
 							if (regDataBool[3] == 1) { regDataBool[3] = 0;
 								d3.select(this).attr("fill", "white");}
 							else { regDataBool[3] = 1;
@@ -792,14 +800,16 @@ viz4legendcb3.on("click",function(){
 							hideUnhide(3);
 							 });	
 
-viz4legendca4.on("click",function(){
+viz4legendca4.on("mouseover", function(){d3.select(this).style("cursor","pointer");})
+	.on("click",function(){
 							if (regDataBool[4] == 1) { regDataBool[4] = 0;
 								viz4legendcb4.attr("fill", "white");}
 							else { regDataBool[4] = 1;
 								viz4legendcb4.attr("fill", regionColors[4]); }
 							hideUnhide(4);
 							 });
-viz4legendcb4.on("click",function(){
+viz4legendcb4.on("mouseover", function(){d3.select(this).style("cursor","pointer");})
+	.on("click",function(){
 							if (regDataBool[4] == 1) { regDataBool[4] = 0;
 								d3.select(this).attr("fill", "white");}
 							else { regDataBool[4] = 1;
@@ -807,14 +817,16 @@ viz4legendcb4.on("click",function(){
 							hideUnhide(4);
 							 });
 
-viz4legendca5.on("click",function(){
+viz4legendca5.on("mouseover", function(){d3.select(this).style("cursor","pointer");})
+	.on("click",function(){
 							if (regDataBool[5] == 1) { regDataBool[5] = 0;
 								viz4legendcb5.attr("fill", "white");}
 							else { regDataBool[5] = 1;
 								viz4legendcb5.attr("fill", regionColors[5]); }
 							hideUnhide(5);
 							 });
-viz4legendcb5.on("click",function(){
+viz4legendcb5.on("mouseover", function(){d3.select(this).style("cursor","pointer");})
+	.on("click",function(){
 							if (regDataBool[5] == 1) { regDataBool[5] = 0;
 								d3.select(this).attr("fill", "white");}
 							else { regDataBool[5] = 1;

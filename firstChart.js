@@ -43,12 +43,12 @@ var y01z = d3.stack().keys(d3.range(n))(d3.transpose(yz)),
 	console.log(yfMax);
 	*/
 	
-var svg = d3.select(".viz1"),
+var svgBr = d3.select(".viz1"),
     margin = {top: 150, right: 10, bottom: 80, left: 80},
-    width = +svg.attr("width") - margin.left - margin.right,
-    height = +svg.attr("height") - margin.top - margin.bottom;
+    width = +svgBr.attr("width") - margin.left - margin.right,
+    height = +svgBr.attr("height") - margin.top - margin.bottom;
 
-var g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+var g = svgBr.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 var x = d3.scaleBand()
     .domain(xz)
@@ -142,28 +142,28 @@ g.append("g")
         .tickPadding(6))
 	  
 	  
-var yAxisCall = d3.axisLeft(y)
+var yAxisCallBr = d3.axisLeft(y)
 	//.ticks(3)
 	.tickSize(-width)
 	.tickFormat(function(d){
 		return d;
 	});
 	
-var yAxisCall2 = d3.axisLeft(y)
+var yAxisCallBr2 = d3.axisLeft(y)
 	//.ticks(3)
 	.tickSize(2)
 	.tickFormat("");
 	
 g.append("g")
 	.attr("class", "y axis")
-	.call(yAxisCall);
+	.call(yAxisCallBr);
 
 g.append("g")
-	.attr("class", "yaltaxis")
-	.call(yAxisCall2);
+	.attr("class", "vizBryaltaxis")
+	.call(yAxisCallBr2);
 
 /*
-svg.append("circle")
+svgBr.append("circle")
 	.attr("class", "anno2")
 	.attr("cx",220)
 	.attr("cy",0)
@@ -171,7 +171,7 @@ svg.append("circle")
 	.attr("fill", "#cecece");*/
 
 // title
-  svg.append("text")     
+  svgBr.append("text")     
 	  .attr("class", "viz1title")
       .attr("transform",
             "translate(" + ((width+150)/2)  + " ," + 
@@ -181,7 +181,7 @@ svg.append("circle")
 	
 // labels 
   // text label for the y axis
-  svg.append("text")
+  svgBr.append("text")
       .attr("transform", "rotate(-90)")
       .attr("y", y(0) - margin.left - 180)
       .attr("x",0 - ((height+280) / 2))
@@ -191,7 +191,7 @@ svg.append("circle")
       .text("# of Road Accident Deaths");
 	
   // text label for the x axis
-  svg.append("text")         
+  svgBr.append("text")         
       .attr("transform",
             "translate(" + ((width+150)/2)  + " ," + 
                            (height + margin.top + 50) + ")")
@@ -223,6 +223,7 @@ y.domain([0, yMax]);
 	  .delay(500)
 		.attr("class", "anno1")
 		.attr("stroke", "#cecece")
+		//.attr("stroke", "#cecece")
 		.attr("x1", anno1_x1)
 		.attr("y1", anno1_y1)
 		.attr("x2", anno1_x2)
@@ -411,25 +412,27 @@ y.domain([0, yMax]);
 var tmpwidth = width - 100;
 var tmpcy = margin.top - 60 -20;
 tmpwidth = tmpwidth+30;
-svg.append("circle")
+svgBr.append("circle")
 	.attr("class", "legendmale1")
 	.attr("cx", tmpwidth)
 	.attr("cy", tmpcy)
 	.attr("r", 8)
 	.attr("fill", "#3c8ad8")
+	.on("mouseover", function(){d3.select(this).style("cursor","pointer");})
 	.on("click",function(d){transitionMale();})
 	;
 
-svg.append("circle")
+svgBr.append("circle")
 	.attr("class", "legendmale2")
 	.attr("cx", tmpwidth)
 	.attr("cy", tmpcy)
 	.attr("r", 5)
 	.attr("fill", "white")
+	.on("mouseover", function(){d3.select(this).style("cursor","pointer");})
 	.on("click",function(d){transitionMale();})
 	;	
 
-svg.append("text")
+svgBr.append("text")
 	  .attr("class", "legendmale3")
       //.attr("transform", "rotate(-90)")
       .attr("x", tmpwidth + 12) 
@@ -442,25 +445,27 @@ svg.append("text")
 /// female
 tmpwidth2 = tmpwidth + 70;
 tmpcy = margin.top - 60 -20;
-svg.append("circle")
+svgBr.append("circle")
 	.attr("class", "legendfemale1")
 	.attr("cx", tmpwidth2)
 	.attr("cy", tmpcy)
 	.attr("r", 8)
 	.attr("fill", "#ef69ab")
+	.on("mouseover", function(){d3.select(this).style("cursor","pointer");})
 	.on("click",function(d){transitionFemale();})
 	;
 
-svg.append("circle")
+svgBr.append("circle")
 	.attr("class", "legendfemale2")
 	.attr("cx", tmpwidth2)
 	.attr("cy", tmpcy)
 	.attr("r", 5)
 	.attr("fill", "white")
+	.on("mouseover", function(){d3.select(this).style("cursor","pointer");})
 	.on("click",function(d){transitionFemale();})
 	;	
 
-svg.append("text")
+svgBr.append("text")
 	  .attr("class", "legendfemale3")
       //.attr("transform", "rotate(-90)")
       .attr("x", tmpwidth2 + 12) 
@@ -474,25 +479,27 @@ svg.append("text")
 var tmpwidth = margin.left - 15;
 var tmpcy = margin.top - 60 -20;
 tmpwidth = tmpwidth+30;
-svg.append("circle")
+svgBr.append("circle")
 	.attr("class", "legendstk1")
 	.attr("cx", tmpwidth)
 	.attr("cy", tmpcy)
 	.attr("r", 8)
 	.attr("fill", "black")
+	.on("mouseover", function(){d3.select(this).style("cursor","pointer");})
 	.on("click",function(d){transitionStacked();})
 	;
 
-svg.append("circle")
+svgBr.append("circle")
 	.attr("class", "legendstk2")
 	.attr("cx", tmpwidth)
 	.attr("cy", tmpcy)
 	.attr("r", 5)
 	.attr("fill", "black")
+	.on("mouseover", function(){d3.select(this).style("cursor","pointer");})
 	.on("click",function(d){transitionStacked();})
 	;	
 
-svg.append("text")
+svgBr.append("text")
 	  .attr("class", "legendstk3")
       //.attr("transform", "rotate(-90)")
       .attr("x", tmpwidth + 12) 
@@ -505,25 +512,27 @@ svg.append("text")
 /// grp
 tmpwidth2 = tmpwidth + 90;
 tmpcy = margin.top - 60 -20;
-svg.append("circle")
+svgBr.append("circle")
 	.attr("class", "legendgrp1")
 	.attr("cx", tmpwidth2)
 	.attr("cy", tmpcy)
 	.attr("r", 8)
 	.attr("fill", "black")
+	.on("mouseover", function(){d3.select(this).style("cursor","pointer");})
 	.on("click",function(d){transitionGrouped();})
 	;
 
-svg.append("circle")
+svgBr.append("circle")
 	.attr("class", "legendgrp2")
 	.attr("cx", tmpwidth2)
 	.attr("cy", tmpcy)
 	.attr("r", 5)
 	.attr("fill", "white")
+	.on("mouseover", function(){d3.select(this).style("cursor","pointer");})
 	.on("click",function(d){transitionGrouped();})
 	;	
 
-svg.append("text")
+svgBr.append("text")
 	  .attr("class", "legendgrp3")
       //.attr("transform", "rotate(-90)")
       .attr("x", tmpwidth2 + 12) 
@@ -794,19 +803,19 @@ function transitionGrouped() {
 
 
   
-  yAxisCall.scale(y);
-  yAxisCall2.scale(y);
+  yAxisCallBr.scale(y);
+  yAxisCallBr2.scale(y);
   
   var t = d3.transition()
             .duration(500);
 
-	svg.select(".y")
+	svgBr.select(".y")
 		.transition(t)
-		.call(yAxisCall); 
+		.call(yAxisCallBr); 
 		
-	svg.select(".yaltaxis")
+	svgBr.select(".vizBryaltaxis")
 		.transition(t)
-		.call(yAxisCall2); 
+		.call(yAxisCallBr2); 
 		
   rect.transition()
       .duration(500)
@@ -1044,21 +1053,21 @@ function transitionStacked() {
   
   y.domain([0, y1Max]);
   
-  yAxisCall.scale(y);
-  yAxisCall2.scale(y);
+  yAxisCallBr.scale(y);
+  yAxisCallBr2.scale(y);
   
-  //yAxisCall.tickSize(-width);
+  //yAxisCallBr.tickSize(-width);
   
   var t = d3.transition()
             .duration(500);
 
-	svg.select(".y")
+	svgBr.select(".y")
 		.transition(t)
-		.call(yAxisCall); 
+		.call(yAxisCallBr); 
 	
-	svg.select(".yaltaxis")
+	svgBr.select(".vizBryaltaxis")
 		.transition(t)
-		.call(yAxisCall2); 
+		.call(yAxisCallBr2); 
 
   rect.transition()
       .duration(500)
@@ -1297,20 +1306,20 @@ function transitionMale() {
   
   
   
-  yAxisCall.scale(y);
+  yAxisCallBr.scale(y);
   
-  yAxisCall.scale(y);
+  yAxisCallBr.scale(y);
 
   var t = d3.transition()
             .duration(500);
 
-	svg.select(".y")
+	svgBr.select(".y")
 		.transition(t)
-		.call(yAxisCall); 
+		.call(yAxisCallBr); 
 	
-	svg.select(".yaltaxis")
+	svgBr.select(".vizBryaltaxis")
 		.transition(t)
-		.call(yAxisCall2); 
+		.call(yAxisCallBr2); 
 		
 	//console.log(rect);
 	  	rect.transition()
@@ -1370,9 +1379,11 @@ function transitionFemale() {
   
   //transitionStacked()
   
-  // console.log("am in transitionFemale");
+   y.domain([0, yMax]);
+   console.log("am in transitionFemale");
+   console.log("yMax");
   
-	y.domain([0, yMax]);
+	
   /////////////////////////// ANNOTATIONS 
 
 
@@ -1569,21 +1580,24 @@ function transitionFemale() {
 
 	y.domain([0, yfMax]);
   
+   //y.domain([0, yMax]);
+   console.log("yfMax");
+   console.log(yfMax);
+   
+  yAxisCallBr.scale(y);
   
-  yAxisCall.scale(y);
-  
-  yAxisCall.scale(y);
+  yAxisCallBr2.scale(y);
 
   var t = d3.transition()
             .duration(500);
 
-	svg.select(".y")
+	svgBr.select(".y")
 		.transition(t)
-		.call(yAxisCall); 
+		.call(yAxisCallBr); 
 	
-	svg.select(".yaltaxis")
+	svgBr.select(".vizBryaltaxis")
 		.transition(t)
-		.call(yAxisCall2); 
+		.call(yAxisCallBr2); 
 	
 	
 		
