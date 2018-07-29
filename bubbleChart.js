@@ -643,7 +643,7 @@ svg6.selectAll('.cirLabels').remove();
       .attr("dx", 379).attr("dy", 298+5)
 	  .style("stroke-width",8).style("fill", "white")
       .style("text-anchor", "middle")
-      .text("Trucks");
+      .text("Cars");
 
 	svg6.append("text")
 	  .transition()
@@ -653,7 +653,7 @@ svg6.selectAll('.cirLabels').remove();
       .attr("dx", 98).attr("dy", 297+5)
 	  .style("stroke-width",8).style("fill", "white")
       .style("text-anchor", "middle")
-      .text("Cars");
+      .text("Trucks");
 
  			
 /*

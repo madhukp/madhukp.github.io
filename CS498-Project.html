@@ -11,7 +11,7 @@
          /* Style for our header texts
          * --------------------------------------- */
          h1{
-         font-size: 5em;
+         font-size: 3em;
          font-family: arial,helvetica;
          color: #2c2d2d;
          margin:0;
@@ -62,7 +62,7 @@
 		
 	/*	.bodyText {
 			font-size: 16px;
-LINE-HEIGHT:40px;
+LINE-HEIGHT:30px;
 		}*/
 		.bodyText {
 		  font-size: 13.5px;
@@ -70,7 +70,7 @@ LINE-HEIGHT:40px;
 		/*  -webkit-margin-before: 0.2em;
 		  -webkit-margin-after: 0.2em;*/
 		 /* color:#404040; */
-		 color:#353535;
+		 color:#262626;
 		  text-align: justify;
 LINE-HEIGHT:17px;
 
@@ -269,24 +269,28 @@ LINE-HEIGHT:17px;
       <div id="fullpage" class="fullpage-wrapper" style="height: 100%; position: relative; touch-action: none; transform: translate3d(0px, 0px, 0px); transition: all 700ms ease;">
          <div class="section active fp-section" id="section1" data-fp-styles="null" data-anchor="firstPage" style="height: 100%; background-color: white;background:url('bckImage1.png');background-repeat: no-repeat;background-position: center;background-attachment: fixed; background-size:cover; ">
                <div class="intro" align="center"style="height: 40%;" onclick="window.location='./CS498-Project.html#secondPage'">
-                  <h1>Welcome</h1>
+                  <h1>Road Accident Deaths in India</h1>
+					<h2>An Interactive Visual Narration</h2>
+					<h2>by</h2>
+					<h2>Madhukar K P</h2>
 				  <br>
                   <button class="button1" type="button">About this Visualization</button>
                </div>
          </div>
-         <div class="section fp-section fp-table" id="section2" data-fp-styles="null" data-anchor="secondPage" style="width: 100%; height: 00%; background-color: white; padding-left: 3%; padding-right: 7%;">
+         <div class="section fp-section fp-table" id="section2" data-fp-styles="null" data-anchor="secondPage" style="width: 100%; height: 00%; background-color: white; padding-left: 3%; padding-right: 8%;">
 			<div class="fp-tableCell"  style="height:662px;">
 							<div style="float: right; width: 50%;">
-								<div style="padding-left:10%;">
-								<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">Annotations</p>
-								<p class="bodyText">This project was build using <strong>interactive slideshow hybrid structures model</strong> to provide a narrative story. The slides are presented horizontally and a slide-navigator tool to the right-center of the screen is provided. The current slide is indicated by an enlarged circle in the slide-navigator, users can hover over each circlular buttons in the slide-navigator tool to know the title of the slide. Users can scroll through the slides top to bottom sequentially or they can jump to particular slide using the slide-navigator tool.</p><br>
-									<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">Parameters</p>
-								<p class="bodyText">This project was build using <strong>interactive slideshow hybrid structures model</strong> to provide a narrative story. The slides are presented horizontally and a slide-navigator tool to the right-center of the screen is provided. The current slide is indicated by an enlarged circle in the slide-navigator, users can hover over each circlular buttons in the slide-navigator tool to know the title of the slide. Users can scroll through the slides top to bottom sequentially or they can jump to particular slide using the slide-navigator tool.</p><br>
-									<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">Triggers</p>
-								<p class="bodyText">This project was build using <strong>interactive slideshow hybrid structures model</strong> to provide a narrative story. The slides are presented horizontally and a slide-navigator tool to the right-center of the screen is provided. The current slide is indicated by an enlarged circle in the slide-navigator, users can hover over each circlular buttons in the slide-navigator tool to know the title of the slide. Users can scroll through the slides top to bottom sequentially or they can jump to particular slide using the slide-navigator tool.</p><br>
+								<div style="padding-left:7%;">
+								<!--p style="font-size: 40px; font-weight: bold; color:#1a1a1a;">&nbsp;</p!-->
+								<p class="bodyText">Similarly in the donut chart and bubble chart, annotations are cleared when users change the view to explore or remove certain data points. Annotations re-appear in line chart, donut chart and bubble chart when user inputs are restored to initial values. The font color, style and structure of annotations are maintained same across all scenes for visual consistency.
+								</p><br>
+								<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">Parameters:</p>
+								<p class="bodyText">The main parameter in this narration is the slide number which is controlled by the slide-navigator tool to the center-right of the screen. The current slide is indicated by an enlarged circle in the slide-navigator. Within each slide there are parameters represented by click buttons, radio buttons and brush bar that control the current state of the visual. Example, in the 'Overview' bar chart, radio buttons on the top control how and what data points are displayed. In the line chart year-brush-bar at the bottom provides a zoom-in/out feature and controls the x-axis year scale for the chart. Click buttons in donut chart and bubble chart control the year and grouping parameters respectively. And finally radio buttons in line chart and donut chart control include/not-include parameter for data points.</p><br>
+									<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">Triggers:</p>
+								<p class="bodyText">There are several  noticeable triggers in this presentation. Users can hover over each circlular buttons in the slide-navigator tool to know the title of the slide and click on it to jump to that particular slide. Within each slide, actions performed on click buttons, radio buttons or brush bar trigger certain events. Example, in the 'Overview' bar chart, based on the radio button that users select the y-axis is fluidly re-scaled and bars are rearranged or removed or added in the view. In the line chart, based on the year window selected using the year-brush-bar at the bottom, the x-axis is re-scaled and data points for that year are displayed. Events like clicking on buttons in donut chart and bubble chart triggers the change in year snapshot and grouping of data points respectively. Clicking on radio buttons in line chart and donut chart toggles the display of respective data points. In addition, the radio buttons in donut chart also triggers re-scaling of arc angles. And finally whenever users hover over any shape representing a data point, a tooltip display is triggered along with enhanced focus on the shape. The main purpose of using elements like click buttons and radio buttons for triggering events was that they are very common web elements and so users will be instinctively aware of their presence and usage. The fill colors of the buttons toggles based on selection for user awareness.</p><br>
 									
-									<p style="font-size: 16px; font-weight: bold; color:red;">Caution: </p>
-									<p class="bodyText">This project is best viewed on desktops using Chrome (preferred), Firefox or Safari. It is not suitable for viewing on phones or tables. You might see overlapping contents on phones or tables.</p>
+									<!--p style="font-size: 16px; font-weight: bold; color:red;">Caution: </p!-->
+									<p class="bodyText"><font color="red"><strong>Caution:</strong></font> This project is best viewed on desktops using Chrome (preferred), Firefox or Safari. It is not suitable for viewing on phones or tables; you might see overlapping contents on these devides.</p>
 								</div>
 							</div>
 							<div style="float: left; width: 50%;">
@@ -299,12 +303,18 @@ LINE-HEIGHT:17px;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;To what age groups did the victims belong to? Are numbers for any age group concering?<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;Should traffic/licensing rules for any particular mode of transportation be relooked at?</p><br>
 								<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">Narrative Visualization Method:</p>
-								<p class="bodyText">This project was build using <strong>interactive slideshow hybrid structures model</strong> to provide a narrative story. The slides are presented horizontally and a slide-navigator tool to the right-center of the screen is provided. The current slide is indicated by an enlarged circle in the slide-navigator, users can hover over each circlular buttons in the slide-navigator tool to know the title of the slide. Users can scroll through the slides top to bottom sequentially or they can jump to particular slide using the slide-navigator tool.</p><br>
+								<p class="bodyText">This project was build using <strong>interactive slideshow hybrid structures model</strong> to provide a narrative story. The slides are presented horizontally and descriptive information and guidelines are provided in each slide to aid interested users to drill down or explore each scene further.</p><br>
 								<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">Scenes:</p>
-								<p class="bodyText">This project was build using <strong>interactive slideshow hybrid structures model</strong> to provide a narrative story. The slides are presented horizontally and a slide-navigator tool to the right-center of the screen is provided. The current slide is indicated by an enlarged circle in the slide-navigator, users can hover over each circlular buttons in the slide-navigator tool to know the title of the slide. Users can scroll through the slides top to bottom sequentially or they can jump to particular slide using the slide-navigator tool.</p><br>
-								
-								
-							</div>			
+								<p class="bodyText">There are four scenes in this narration that are presented as individual slides. Below is a brief description of each and the chart type used to design them. To maintain visual consistency across scenes, a two column layout with one column for charts and another for descriptive information/guidelines was used for all slides. Without distracting users, the chart and descriptive columns are alternated (left/right) across scenes for better visual appeal. Also the style of elements like font, click buttons, radio buttons, labels, tooltips, etc. are maintained consistent across scenes.
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;Overview: A Bar Chart on total road accident death counts.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;States Comparison: A Line Chart for state-wise comparison.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;Age Group: A Donut Chart presenting death toll numbers by age group.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;Mode of Transportation: A Bubble Chart grouping numbers by vehicle size and type.</p><br>
+<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">Annotations: </p>
+								<p class="bodyText">Annotations are used in each scene to call out user attentions on certain data points that are high or interesting or concerning. In the 'Overview' bar chart the annotations indicating trends are realigned and updated based on the parameters users select. In the line chart the annotations are cleared when users try to zoom in on the year scale to explore further or when they unselect the data points to which annotation relates to. 
+								</p>
+								</div>			
 						</div>
          </div>
 		 
@@ -318,14 +328,14 @@ LINE-HEIGHT:17px;
 				<div style="float: left; width: 40%;">
 					<p style="font-size: 40px; font-weight: bold; color:#1a1a1a;">Overview</p><br><br>
 					<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">Total Road Accident Deaths over Years</p><br>
-								<p class="bodyText">This project was build using <strong>interactive slideshow hybrid structures model</strong> to provide a narrative story. The slides are presented horizontally and a slide-navigator tool to the right-center of the screen is provided. The current slide is indicated by an enlarged circle in the slide-navigator, users can hover over each circlular buttons in the slide-navigator tool to know the title of the slide. Users can scroll through the slides top to bottom sequentially or they can jump to particular slide using the slide-navigator tool.</p><br><br>
+								<p class="bodyText">In this first visual, total number of road accidents deaths in India from the year 2001 to 2016 grouped by gender are presented using bar chart. We can notice that overall the numbers have only increased, particularly between the year 2004 and 2010 there is a slight steep increase in numbers (indicated by annotation) which makes sense as each year the overall population and vehicle numbers have only climbed and never dropped allowing for more accident cases. Contrary to the trend seen between year 2004 and 2010 there was a slight dip in numbers in the year 2013 (also indicated by annotation) compared to its previous year, which is a good sign indicating that even as the population and vehicles count increase it is still possible to control the accidents and bring it down. Another concerning point to notice here is that the numbers for male are shockingly high compared to female.</p><br><br>
 									<p style="font-size: 16px; font-weight: bold; color:#00aaff;">What you can do?</p><br>
 									<p class="bodyText">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;What was the trend in death counts from road accidents over years?<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;How did the numbers compare Gender wise? Did any gender ll counts?<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;Did any particular region or states consistently report ver years?<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;To what age groups did the victims belong to? Are number concering?<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;Should traffic/licensing rules for any particular mode oslooked at?</p><br>
+&bull;&nbsp;&nbsp;Click on "Stacked" radio button to view stacked bars for male and female<br>&nbsp;&nbsp;&nbsp;to compare total numbers across years.<br>
+&bull;&nbsp;&nbsp;Click on "Grouped" radio button to view the bars for male and female side by<br>&nbsp;&nbsp;&nbsp;side to compare numbers gender wise across years.<br>
+&bull;&nbsp;&nbsp;Click on "Male" radio button to view the bars for male only.<br>
+&bull;&nbsp;&nbsp;Click on "Female" radio button to view the bars for female only.<br>
+&bull;&nbsp;&nbsp;Hover over any bars to view tooltips indicating actual numbers.</p><br>
 				</div>			
 			</div>
          </div>
@@ -340,18 +350,16 @@ LINE-HEIGHT:17px;
 				<div style="float: right; width: 35%;">
 					<p style="font-size: 40px; font-weight: bold; color:#1a1a1a;">States Comparison</p><br><br>
 					<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">Region/State wise comparison of Road Accident Deaths</p><br>
-								<p class="bodyText">This project was build using <strong>interactive slideshow hybrid structures model</strong> to provide a narrative story. The slides are presented horizontally and a slide-navigator tool to the right-center of the screen is provided. The current slide is indicated by an enlarged circle in the slide-navigator, users can hover over each circlular buttons in the slide-navigator tool to know the title of the slide. Users can scroll through the slides top to bottom sequentially or they can jump to particular slide using the slide-navigator tool.</p><br><br>
+								<p class="bodyText">Now that we have seen the total numbers lets take a peak at how they distributed across different states or regions using this multiple line graph here. Some of the states have reported very low numbers and some very high, so to better fit all states in this graph and for easy comparison logarithmic y-axis scale is used. We can see that some of the states have consitently reported high numbers, are traffic rules or licensing rules lax in these states and needs attention?</p><br><br>
 									<p style="font-size: 16px; font-weight: bold; color:#00aaff;">What you can do? </p><br>
 									<p class="bodyText">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;What was the trend in death counts r years?<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;How did the numbers compare Gender ll counts?<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;Did any particular region or states ver years?<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;To what age groups did the victims  concering?<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;Should traffic/licensing rules for ooked at?</p><br>
+&bull;&nbsp;&nbsp;Drag and select on either end of the year-brush-bar at the bottom to<br>&nbsp;&nbsp;&nbsp;select a particular window. This acts as a zoom in/out feature.<br>
+&bull;&nbsp;&nbsp;After selecting a year window you can also click and drag it left and right<br>&nbsp;&nbsp;&nbsp;to shift the line chart focus area.<br>
+&bull;&nbsp;&nbsp;Click on radio buttons to include or not include particular regions in the<br>&nbsp;&nbsp;&nbsp;view. Using this you can view trend for any one particular region or<br>&nbsp;&nbsp;&nbsp;compare selective regions.<br>
+&bull;&nbsp;&nbsp;Hover over any data points to view tooltips indicating actual numbers.</p><br>
 				</div>	
 			</div>
          </div>
-
 		 <div class="section fp-section fp-table" id="section5" style="width: 100%; height: 662px; padding-left: 3%; padding-right: 7%; background-color: rgb(242, 242, 242);"  data-anchor="fifthPage"><div class="fp-tableCell" style="height:662px;">
 				<div style="float: right; width: 60%;">
 					<div style="padding-left:6%;">
@@ -361,14 +369,12 @@ LINE-HEIGHT:17px;
 				<div style="float: left; width: 40%;">
 					<p style="font-size: 40px; font-weight: bold; color:#1a1a1a;">Age Group</p><br><br>
 					<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">Road Accident Deaths breakup by Age Group</p><br>
-								<p class="bodyText">This project was build using <strong>interactive slideshow hybrid structures model</strong> to provide a narrative story. The slides are presented horizontally and a slide-navigator tool to the right-center of the screen is provided. The current slide is indicated by an enlarged circle in the slide-navigator, users can hover over each circlular buttons in the slide-navigator tool to know the title of the slide. Users can scroll through the slides top to bottom sequentially or they can jump to particular slide using the slide-navigator tool.</p><br><br>
+								<p class="bodyText">In this vizualization road accident deaths are compared by age groups for 2014, 2015 and 2016 individually using donut chart. Here we can see that the numbers for teens/kids were significant in the year 2016, which is very troubling. This raises questions like - are safety rules for under aged kids like baby seats, seat belts, etc not followed properly that we are seeing such high numbers for them? Also age group "26 to 35" consistently took the major share in all three years. Should more awareness campaigns on traffic safety be held targetting this age group?</p><br><br>
 									<p style="font-size: 16px; font-weight: bold; color:#00aaff;">What you can do? </p><br>
 									<p class="bodyText">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;What was the trend in death counts r years?<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;How did the numbers compare Gender ll counts?<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;Did any particular region or states ver years?<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;To what age groups did the victims  concering?<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;Should traffic/licensing rules for ooked at?</p><br>
+&bull;&nbsp;&nbsp;Click on buttons labeled with year to get a snapshop of the numbers for that<br>&nbsp;&nbsp;&nbsp;particular year.<br>
+&bull;&nbsp;&nbsp;Click on radio buttons to include or not include particular age groups in the view.<br>&nbsp;&nbsp;&nbsp;Using this you can compare selective age groups for a given year.<br>
+&bull;&nbsp;&nbsp;Hover over any arcs to view tooltips indicating actual numbers.</p><br>
 				</div>			
 			</div>
          </div>	 
@@ -383,14 +389,12 @@ LINE-HEIGHT:17px;
 				<div style="float: right; width: 35%;">
 					<p style="font-size: 40px; font-weight: bold; color:#1a1a1a;">Mode of Transportation</p><br><br>
 					<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">Transportation mode and vehicle size</p><br>
-								<p class="bodyText">This project was build using <strong>interactive slideshow hybrid structures model</strong> to provide a narrative story. The slides are presented horizontally and a slide-navigator tool to the right-center of the screen is provided. The current slide is indicated by an enlarged circle in the slide-navigator, users can hover over each circlular buttons in the slide-navigator tool to know the title of the slide. Users can scroll through the slides top to bottom sequentially or they can jump to particular slide using the slide-navigator tool.</p><br><br>
+								<p class="bodyText">And finally the bubble chart here compares for the year 2016 the vehicles that were involved in the road accident deaths. Each bubble represents a transport mode and it's area represent the number of accident deaths that were observed with it. We can immediately notice that the numbers for Motor Cycles and Trucks are astonishingly high. This raises questions like - are current licensing procedures for these vehicles not stringent enough? Should special traffic rules be enfored for these modes?</p><br><br>
 									<p style="font-size: 16px; font-weight: bold; color:#00aaff;">What you can do? </p><br>
 									<p class="bodyText">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;What was the trend in death counts r years?<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;How did the numbers compare Gender ll counts?<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;Did any particular region or states ver years?<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;To what age groups did the victims  concering?<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;Should traffic/licensing rules for ooked at?</p><br>
+&bull;&nbsp;&nbsp;Click on "All Transport Modes" button to view all the data points<br>&nbsp;&nbsp;&nbsp;(bubbles) together.<br>
+&bull;&nbsp;&nbsp;Click on "By Transport Mode Size" button to view the data points<br>&nbsp;&nbsp;&nbsp;(bubbles) grouped by vehicle size.<br>
+&bull;&nbsp;&nbsp;Hover over any bubble to view tooltips indicating actual numbers.</p><br>
 				</div>	
 			</div>
          </div>		 
@@ -428,8 +432,8 @@ LINE-HEIGHT:17px;
 					
 			navigation: true,
          	navigationPosition: 'right',
-         	//navigationTooltips: ['Welcome', 'About this Visualization', 'Overview', 'States Comparison', 'Age Group', 'Mode of Transportation', 'References']
-			navigationTooltips: ['Welcome', 'About', 'Overview', 'States', 'Age Group', 'Mode', 'References']//'Welcome', 'About this visualization', 'Overview'  # c1efff - dark blue   # e1f7ff - light blue 
+         	//navigationTooltips: ['Welcome', 'About', 'Overview', 'States Comparison', 'Age Group', 'Mode of Transportation', 'References']
+			navigationTooltips: ['[1] Welcome', '[2] About', '[3] Overview', '[4] States', '[4] Age Group', '[6] Mode', '[7] References']//'Welcome', 'About this visualization', 'Overview'  # c1efff - dark blue   # e1f7ff - light blue 
 			//  '#fdefe7', '#fefaf8'  f9fbfc
          });
       </script>

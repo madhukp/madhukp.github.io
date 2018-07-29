@@ -79,6 +79,10 @@ var rect = series.selectAll("rect")
     .attr("width", x.bandwidth())
     .attr("height", 0)
 	.on("mouseover", function(d, i){
+
+			d3.select(this).attr("stroke","#4f4f4f").attr("stroke-width",2);
+			console.log(d);
+			console.log(d3.select(this));
 	        tooltip
 			  .transition()
 			  .duration(200)
@@ -93,6 +97,7 @@ var rect = series.selectAll("rect")
               ;  // 
         })
     		.on("mouseout", function(d){ 
+			d3.select(this).attr("stroke","#cecece").attr("stroke-width",0);
 			tooltip
 				.transition()
 				.duration(1)
