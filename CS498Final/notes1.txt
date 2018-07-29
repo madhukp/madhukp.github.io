@@ -1,0 +1,40 @@
+There are four scenes in this narration presented as individual slides. Below is a brief description of each scene. To maintain visual consistency across scenes a two column layout with one column for charts and another for descriptive information/guidelines was used for all the slides. Without distracting the users, the chart and descriptive columns are alternated (left/right) across scenes for better visual appeal. Also style of elements like font, click buttons, radio buttons, axis, labels, tooltips etc are maintained consistent across scenes for coherence.
+
+1. Overview: A Bar Chart on total road accident death counts.
+2. States Comparison: A Line Chart state-wise comparison.
+3. Age Group: A Donut Chart death toll numbers by age group.
+4. Mode of Transportation: A Bubble Chart grouping numbers by mode of transportation
+How did the numbers compare Gender wise? Did any gender dominate the death toll counts?
+----------------
+
+The slides are presented horizontally and a slide-navigator tool to the right-center of the screen is provided. The current slide is indicated by an enlarged circle in the slide-navigator, users can hover over each circlular buttons in the slide-navigator tool to know the title of the slide. Users can scroll through the slides top to bottom sequentially or they can jump to particular slide using the slide-navigator tool.
+
+-----------------------------------------------------------------------------------------
+
+The slides are presented horizontally and descriptive information and guidelines are provided in each slide to aid interested users to drill down or explore each scene further.
+
+---------------------------
+The main parameter in this narration is the slide-navigator tool to the center-right of the screen. The current slide is indicated by an enlarged circle in the slide-navigator, users can hover over each circlular buttons in the slide-navigator tool to know the title of the slide. Users can scroll through the slides top to bottom sequentially or they can jump to particular slide using the slide-navigator tool. Within each slide there are click buttons, radio buttons and brush bar which control a set of parameters. Example in the 'Overview' bar chart radio buttons on the top control what data points and how they are displayed. In the line chart year-brush-bar at the bottom controls the years for which data points should be displayed. Click buttons in donut chart and bubble chart control the year and grouping of data points respectively. And finally radio buttons in line chart and donut chart control what data points are displayed.
+
+-----------------------------------------------------------------------------------------
+
+, users can hover over each circlular buttons in the slide-navigator tool to know the title of the slide. Users can scroll through the slides top to bottom sequentially or they can jump to particular slide using the slide-navigator tool. Within each slide there are click buttons, radio buttons and brush bar which control a set of parameters. Example in the 'Overview' bar chart radio buttons on the top control what data points and how they are displayed. In the line chart year-brush-bar at the bottom controls the years for which data points should be displayed. Click buttons in donut chart and bubble chart control the year and grouping of data points respectively. And finally radio buttons in line chart and donut chart control what data points are displayed.
+
+-----------------------------------------------------------------------------------------
+There are several instinctively noticeable triggers in this presentation. Users can scroll through the slides top to bottom sequentially or they can jump to particular slide using the slide-navigator tool. Users can hover over each circlular buttons in the slide-navigator tool to know the title of the slide before selecting it. Within each slide actions performed on click buttons, radio buttons or brush bar trigger certain events. Example in the 'Overview' bar chart, based on the radio button that users select the y-axis is fluidly re-scaled and bars are rearranged or removed or added in the view. In the line chart based on the year window that users select using the year-brush-bar at the bottom controls the x-axis is re-scalred and data points for that year are displayed. years for which data points should be displayed. Events like clicking on buttons in donut chart and bubble chart triggers the change in year snapshot and grouping of data points respectively. Clicking on radio buttons in line chart and donut chart toggles the display of respective data points. In addition the radio buttons in donut chart also triggers re-scaling of angles. And finally whenever users hover over any shape representing a data point, a tooltip display is triggered. The format of tooltips are maintained consistent across scenes.
+-----------------------------------------------------------------------------------------
+
+
+Annotations are used in each scene to call out user attentions on certain data points that are high or interesting or concerning. They are cleared or reloaded with appropriate alignment and information when the users input changes the view or toggles the present of data items that the annotation relates to.
+
+They are cleared or reloaded with appropriate alignment and information when the user input changes the view or toggles the presence of data items that the annotation relates to. They re-appear when user inputs are restored to initial values. The font color, style and structure of annotations are maintained consistent across scenes.
+
+They are cleared when users try to zoom in and explore or their input toggles the presence of data items that the annotation relates to, example in the line chart the annotations are cleared when users try to zoom in on the year scale or remove the states to which annotation relates. Similarly in the donut chart and bubble chart annotations are cleared when users change the view or remove certain data points. Also in some cases they are reloaded with appropriate alignment and information when the user input changes the view, example in the 'Overview' bar chart the annotations on trends are realigned and updated based on the parameters users select. They re-appear when user inputs are restored to initial values. 
+
+They re-appear when the parameters controlling the snapstop of a scene are restored to initial values
+
+. The font color, style and structure of annotations are maintained consistent across scenes. Below are the details on annotations usage and on how they are cleared or adjusted in individual scenes,
+1. Overview: In the Bar Chart, annotations are used to highlight increasing or dropping trend in numbers over certain years. They are cleared and reloaded with appropriate alignment and information based on user inputs.
+2. States Comparison: In the Line Chart, annotations are used to point out couple of high death toll numbers. They are cleared when users zoom in on the year scale or remove the state to which the annotation points to. They re-appear when user inputs are restored to initial values.
+3. Age Group: In the Donut Chart, annotations are used to highlight high/concerning nubmers for a particular age group for the year 2016. They are cleared when users explore other years or remove the related age groups from 2016 view. They re-appear when user inputs are restored to initial values.
+4. Mode of Transportation: In the Bubble Chart, the transportation modes with highest and second highest death toll numbers are highlighted using annotations. They are cleared when users switch the view to group modes by vehicle size. 
